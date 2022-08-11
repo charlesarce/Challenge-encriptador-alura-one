@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input/>
+    <button>encriptar</button>
+
+
+</body>
+
+<script>
+
+function saltarLinea() {
+        document.write("<br>");
+    }
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+var mje = document.querySelector("input")
+
+// `La letra "e" es convertida para "enter"`
+// `La letra "i" es convertida para "imes"`
+// `La letra "a" es convertida para "ai"`
+// `La letra "o" es convertida para "ober"`
+// `La letra "u" es convertida para "ufat"`
+
+
+function  encriptar() {
+
+    var frase= []
+    for(var i = 0; i <mje.value.length; i++) {
+        if(mje.value[i]=="e"){
+            frase.push("enter");
+        }
+        if(mje.value[i]=="i"){
+
+            frase.push("imes")
+        }
+        if(mje.value[i]=="a"){
+
+            frase.push("ai")
+        }
+        if(mje.value[i]=="o"){
+
+            frase.push("ober")
+        }
+        if(mje.value[i]=="u"){
+
+            frase.push("ufat")
+        }
+        else if(mje.value[i]!="e"&&
+                mje.value[i]!="i"&&
+                mje.value[i]!="a"&&
+                mje.value[i]!="o"&&
+                mje.value[i]!="u"){
+                
+            frase.push(mje.value[i])
+        }}
+        console.log(frase.join(""))
+
+    }
+
+    
+    
+
+var button = document.querySelector("button");
+    button.onclick = encriptar;
+   
+
+</script>
+
+</html>
