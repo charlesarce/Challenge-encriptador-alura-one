@@ -1,79 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styleDark.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <title>Encriptador </title>
 </head>
 <body>
-    <input/>
-    <button>encriptar</button>
+    
+    <header>
+        <img src="./img/Logo.png" alt="Logo Alura" class="logo">
+       
+    </header>
 
+   <main>
+    <section class="principal">
+        <textarea class="text-area" placeholder="Ingrese texto aqui"></textarea>
+        <button id="btn-encriptar">Encriptar</button>
+        
+        <button id="btn-desencriptar">Desencriptar</button>
+        <div class="contenedor-limpiar">
+
+            <button type="reset" class="btn-limpiar">Limpiar</button>
+        </div>
+    </section>
+
+    <section class="resultado">
+        <div class="contenedor-munheco">
+
+            <img src="./img/Muñeco.png" alt="Muñeco alura" class="munheco ">
+        </div>
+        <div class="contenedor-texto ">
+
+            <h3 class="titulo">Ningun mensaje fue encontrado</h3>
+            <p class="parrafo">Ingrese el mensaje que desees encriptar o desencriptar</p>
+
+        </div>
+        <div class="texto-resultado ocultar">
+            <h1 class="titulo-mje">Mensaje</h1>
+            <p class="mensaje-resultado"></p>
+            <button class="btn-copiar">
+            Copiar <i class="fa-solid fa-copy"></i>
+            </button>
+
+        </div>
+        
+    </section>
+
+    <div class="mensaje-copiado">
+        <p>!Copiado al portapapeles!</p>
+    </div>
+   
+
+   </main>
+   
+   <footer>
+<h5>Autor: Carlos Arceguet para Alura latam</h5>
+   </footer>
 
 </body>
 
-<script>
-
-function saltarLinea() {
-        document.write("<br>");
-    }
-
-    function imprimir(frase) {
-        document.write(frase);
-        saltarLinea();
-    }
-var mje = document.querySelector("input")
-
-// `La letra "e" es convertida para "enter"`
-// `La letra "i" es convertida para "imes"`
-// `La letra "a" es convertida para "ai"`
-// `La letra "o" es convertida para "ober"`
-// `La letra "u" es convertida para "ufat"`
-
-
-function  encriptar() {
-
-    var frase= []
-    for(var i = 0; i <mje.value.length; i++) {
-        if(mje.value[i]=="e"){
-            frase.push("enter");
-        }
-        if(mje.value[i]=="i"){
-
-            frase.push("imes")
-        }
-        if(mje.value[i]=="a"){
-
-            frase.push("ai")
-        }
-        if(mje.value[i]=="o"){
-
-            frase.push("ober")
-        }
-        if(mje.value[i]=="u"){
-
-            frase.push("ufat")
-        }
-        else if(mje.value[i]!="e"&&
-                mje.value[i]!="i"&&
-                mje.value[i]!="a"&&
-                mje.value[i]!="o"&&
-                mje.value[i]!="u"){
-                
-            frase.push(mje.value[i])
-        }}
-        console.log(frase.join(""))
-
-    }
-
-    
-    
-
-var button = document.querySelector("button");
-    button.onclick = encriptar;
-   
-
-</script>
+<script src="script.js"></script>
 
 </html>
