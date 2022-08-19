@@ -163,3 +163,32 @@ header{
      display: none;
  }
  
+ @media screen and (max-width:480px){
+    .munheco{
+        display: none;
+    }
+  
+    main, .principal, .resultado{
+        display: block;
+        width: 100%;
+       
+        padding-top:10px;
+    }
+    .principal{
+        height: 55%;
+        
+    }
+    button{
+        display:inline-flexbox;
+        width: 80%;
+    }
+    .btn-limpiar{
+        width: 30%;
+    }
+    .resultado{
+        margin-top:50px; 
+        height:40%
+    }
+    
+   
+ }
